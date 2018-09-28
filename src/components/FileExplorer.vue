@@ -57,7 +57,7 @@ export default {
         if (result) {
           this.files.push({ name: this.filename, type: this.isDir ? 'dir' : 'file'});
           this.filename = '';
-          console.log('isDir: ' + this.isDir);
+          console.log('add a ' + (this.isDir ? 'dir' : 'file'));
         } else {
           console.log('Filename ist not valid. (' + this.filename + ')');
         }
