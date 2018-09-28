@@ -12,7 +12,9 @@
       {{ filename }}
       <ul>
         <transition-group name="list" enter-active-class="animated bounceInUp" leave-active-class="animated bounceOutDown">
-          <li v-for="(file, index) in files" :key='index'>{{index}}. ({{file.type}}) {{file.name}}</li>
+          <li v-for="(file, index) in files" :key='index'>{{index}}. ({{file.type}}) {{file.name}}
+            <i class="fa fa-minus-circle" v-on:click="remove(index)"></i>
+          </li>
         </transition-group>
       </ul>
       <p v-if="files.length > 1">You have {{files.length}} files</p>
@@ -62,6 +64,9 @@ export default {
           console.log('Filename ist not valid. (' + this.filename + ')');
         }
       });
+    },
+    remove(id) {
+      this.files.splice(id, 1);
     }
   }
 }
@@ -70,6 +75,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <!-- <style src="./FileExplorer.css" scoped> File is in src/components/FileExplorer.css -->
 <style scoped>
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 @import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
 
   .holder {
@@ -91,8 +97,18 @@ export default {
     color: #3E5252;
   }
 
+  li i {
+     float: right;
+    /* padding: 20px; */
+    /* font-size: 1.3em; */
+    /* background-color: #E0EDF4; */
+    /* border-left: 5px solid #3EB3F6; */
+    /* margin-bottom: 2px; */
+    /* color: #3E5252; */
+  }
+
   p {
-    text-align:center;
+    text-align: center;
     padding: 30px 0;
     color: gray;
   }

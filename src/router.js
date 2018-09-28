@@ -13,7 +13,7 @@ export default new Router({
       component: FileExplorer
     },
     {
-        path: '/about/:name',
+        path: '/about/:name?',
         name: 'about',
         component: About
       }
