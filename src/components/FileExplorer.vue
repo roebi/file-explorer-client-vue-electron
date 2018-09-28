@@ -11,7 +11,9 @@
       </form>
       {{ filename }}
       <ul>
-        <li v-for="(file, index) in files" :key='index'>{{index}}. ({{file.type}}) {{file.name}}</li>
+        <transition-group name="list" enter-active-class="animated bounceInUp" leave-active-class="animated bounceOutDown">
+          <li v-for="(file, index) in files" :key='index'>{{index}}. ({{file.type}}) {{file.name}}</li>
+        </transition-group>
       </ul>
       <p v-if="files.length > 1">You have {{files.length}} files</p>
       <p v-else>You have less than or equal to 1 file</p>
