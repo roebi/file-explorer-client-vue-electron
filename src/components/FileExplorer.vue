@@ -4,7 +4,9 @@
     <div class="holder">
       <form @submit.prevent="addFile">
         <input type="text" placeholder="Enter a filename ..." v-model="filename" v-validate="'min:3'" name="filename">
-        <p class="alert" v-if="errors.has('filename')">{{ errors.first('filename') }}</p>
+        <transition name="alert-in">
+          <p class="alert" v-if="errors.has('filename')">{{ errors.first('filename') }}</p>
+        </transition>
         <input type="checkbox" id="isDir" v-model="isDir">isDir
       </form>
       {{ filename }}
@@ -110,4 +112,22 @@ export default {
     padding: 5px;
     margin-top: -20px;
   }
+  .alert-in-enter-active {
+    animation: bounce-in .5s;
+  }
+  .alert-in-enter-active {
+    animation: bounce-in .5s reverse;
+  }
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}  
 </style>
