@@ -1,11 +1,12 @@
 <template>
   <div class="filexplorer">
     <h1>{{ name }}</h1>
-    <div class="container">
-      <input type="text" placeholder="Enter a file.." v-model="file">
-      {{ file }}
-    </div>
     <div class="holder">
+      <form @submit.prevent="addFile">
+        <input type="text" placeholder="Enter a filename ..." v-model="filename">
+        <input type="checkbox" id="isDir" v-model="isDir">isDir
+      </form>
+      {{ filename }}
       <ul>
         <li v-for="(file, index) in files" :key='index'>{{index}}. ({{file.type}}) {{file.name}}</li>
       </ul>
@@ -13,7 +14,7 @@
       <p v-else>You have less than or equal to 1 file</p>
       <!-- <div v-bind:class="{ alert: showAlert }">vue class binding</div> -->
       <!-- <div v-bind:style="{ backgroundColor: bgColor, width: bgWidth, height: bgHeight }">vue style binding</div> -->
-      <!-- <div v-bind:style="alertObject">vue style binding to object</div> does not work -->
+      <!-- <div v-bind:style="{ alertObject }">vue style binding to object</div> does not work -->
     </div>
   </div>
 </template>
@@ -24,7 +25,8 @@ export default {
   data() {
     return {
       name: 'File Explorer',
-      file: '',
+      filename: '',
+      isDir: true,
       files: [
           { "name": "ZT_AUTOMAT_T",
             "type": "dir"
@@ -41,7 +43,14 @@ export default {
         bgColor: 'yellow',
         bgWidth: '100%',
         bgHeight: '30px'
-      },
+      }
+    }
+  },
+  methods: {
+    addFile() {
+      this.files.push({ name: this.filename, type: this.isDir ? 'dir' : 'file'});
+      this.filename = '';
+      console.log('isDir:' + this.isDir);
     }
   }
 }
