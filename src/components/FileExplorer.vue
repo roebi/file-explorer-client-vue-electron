@@ -1,6 +1,10 @@
 <template>
   <div class="filexplorer">
     <h1>{{ name }}</h1>
+    <div class="container">
+      <input type="text" placeholder="Enter a file.." v-model="file">
+      {{ file }}
+    </div>
     <div class="holder">
       <ul>
         <li v-for="(file, index) in files" :key='index'>{{index}}. ({{file.type}}) {{file.name}}</li>
@@ -20,6 +24,7 @@ export default {
   data() {
     return {
       name: 'File Explorer',
+      file: '',
       files: [
           { "name": "ZT_AUTOMAT_T",
             "type": "dir"
@@ -78,5 +83,14 @@ export default {
 
   .container {
     box-shadow: 0px 0px 40px lightgray;
+  }
+
+  input {
+    width: calc(100% - 40px);
+    border: 0;
+    padding: 20px;
+    font-size: 1.3em;
+    background-color: #323333;
+    color: #687F7F;
   }
 </style>
