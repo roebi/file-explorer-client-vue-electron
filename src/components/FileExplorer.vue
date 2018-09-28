@@ -3,7 +3,8 @@
     <h1>{{ name }}</h1>
     <div class="holder">
       <form @submit.prevent="addFile">
-        <input type="text" placeholder="Enter a filename ..." v-model="filename">
+        <input type="text" placeholder="Enter a filename ..." v-model="filename" v-validate="'min:3'" name="filename">
+        <p class="alert" v-if="errors.has('filename')">{{ errors.first('filename') }}</p>
         <input type="checkbox" id="isDir" v-model="isDir">isDir
       </form>
       {{ filename }}
@@ -48,9 +49,15 @@ export default {
   },
   methods: {
     addFile() {
-      this.files.push({ name: this.filename, type: this.isDir ? 'dir' : 'file'});
-      this.filename = '';
-      console.log('isDir:' + this.isDir);
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          this.files.push({ name: this.filename, type: this.isDir ? 'dir' : 'file'});
+          this.filename = '';
+          console.log('isDir: ' + this.isDir);
+        } else {
+          console.log('Filename ist not valid. (' + this.filename + ')');
+        }
+      });
     }
   }
 }
@@ -59,13 +66,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <!-- <style src="./FileExplorer.css" scoped> File is in src/components/FileExplorer.css -->
 <style scoped>
-.alert {
-    background-color: yellow;
-    width:100%;
-    height: 30px;
-}
-
-.holder {
+  .holder {
     background: #fff;
   }
 
@@ -101,5 +102,12 @@ export default {
     font-size: 1.3em;
     background-color: #323333;
     color: #687F7F;
+  }
+  .alert {
+    background-color: #fdf2ce;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px;
+    margin-top: -20px;
   }
 </style>
