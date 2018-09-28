@@ -4,7 +4,7 @@
     <div class="holder">
       <form @submit.prevent="addFile">
         <input type="text" placeholder="Enter a filename ..." v-model="filename" v-validate="'min:3'" name="filename">
-        <transition name="alert-in">
+        <transition name="alert-in" enter-active-class="animated flipInX" leave-active-class="animated flipOutX">
           <p class="alert" v-if="errors.has('filename')">{{ errors.first('filename') }}</p>
         </transition>
         <input type="checkbox" id="isDir" v-model="isDir">isDir
@@ -68,6 +68,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <!-- <style src="./FileExplorer.css" scoped> File is in src/components/FileExplorer.css -->
 <style scoped>
+@import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
+
   .holder {
     background: #fff;
   }
