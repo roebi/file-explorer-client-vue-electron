@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="filexplorer">
     <h1>{{ msg }}</h1>
     <p>
       For guide and recipes on how to configure / customize this project,<br>
@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'FileExplorer',
   props: {
     msg: String
   }
