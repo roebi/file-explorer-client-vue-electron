@@ -1,13 +1,14 @@
+/* eslint-disable */
+
 import Vue from 'vue';
 import App from './App.vue';
 import VeeValidate from 'vee-validate';
 import router from './router';
 
-// import FileExplorer from './bundle';
-// var api = new FileExplorer.FileApi();
-// Vue.use(FileExplorer);
-
 /*
+import FileExplorer from 'file_explorer';
+
+var fileApi = new FileExplorer.FileApi();
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -15,7 +16,6 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-
 api.listFiles(callback);
 */
 
