@@ -6,5 +6,6 @@ Vue.use(VueI18n);
 
 export default new VueI18n({
     locale: 'de', // set locale // de, en, zh, ja
-    messages // set locale messages
+    fallbackLocale: 'en',
+    messages, // set locale messages
 })

@@ -4,6 +4,11 @@
       <router-link to="/" tag="el-button">Home</router-link>
       <router-link to="/about" tag="el-button">About</router-link>
     </nav>
+    <div class="locale-changer">Language:
+      <select v-model="$i18n.locale">
+        <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
+      </select>
+    </div>
     <router-view/>
   </div>
 </template>
@@ -15,6 +20,10 @@ export default {
   name: 'app',
   components: {
     FileExplorer
+  },
+  // name: 'locale-changer',
+  data () {
+    return { langs: ['de', 'en', 'zh', 'ja'] }
   }
 }
 </script>

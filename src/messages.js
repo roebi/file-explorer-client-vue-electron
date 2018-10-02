@@ -5,31 +5,29 @@ import jaLocale from 'element-ui/lib/locale/lang/ja' // Japanese (ja)
 
 export default {
     en: {
+      el: enLocale.el,
       message: {
         hello: 'hello world',
-        nbOfFiles: 'You have less than or equal to 1 file',
-        enLocale
+        nbOfFiles: 'You have less than or equal to 1 file | You have {count} files',
       }
     },
     de: {
+      el: deLocale.el,
       message: {
         hello: 'Hallo Welt',
-        nbOfFiles: 'Sie haben 1 oder weniger Files.',
-        deLocale
-      }
-    },
-    ja: {
-      message: {
-        hello: 'こ ん に ち は 、 世 界',
-        nbOfFiles: 'TODO Translate: You have less than or equal to 1 file',
-        jaLocale
-      }
+        nbOfFiles: 'Sie haben 1 oder weniger Files. | Sie haben {count} Files.',
+      },
     },
     zh: {
+      el: zhCNLocale.el,
       message: {
         hello: '你好',
-        nbOfFiles: 'TODO Translate: You have less than or equal to 1 file',
-        zhCNLocale
       },
+    },
+    ja: {
+      el: jaLocale.el,
+      message: {
+        hello: 'こ ん に ち は 、 世 界',
+      }
     }
   }

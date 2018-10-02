@@ -15,6 +15,15 @@
         below
       </p>
       <el-button>el-button</el-button>
+      <div class="block">
+        <p class="datepickerwithoptions">Picker with quick options</p>
+        <el-date-picker
+          v-model="pickeddate"
+          type="date"
+          placeholder="Pick a day"
+          :picker-options="datePickerOptions">
+        </el-date-picker>
+      </div>
     </div>
 
   </div>
@@ -25,7 +34,33 @@ export default {
   name: 'About',
   data() {
     return {
-      their_name: this.$route.params.name
+      their_name: this.$route.params.name,
+      pickeddate: '',
+      datePickerOptions: {
+        disabledDate(time) {
+          return time.getTime() > Date.now();
+        },
+        shortcuts: [{
+          text: 'Today',
+          onClick(picker) {
+            picker.$emit('pick', new Date());
+          }
+        }, {
+          text: 'Yesterday',
+          onClick(picker) {
+            const date = new Date();
+            date.setTime(date.getTime() - 3600 * 1000 * 24);
+            picker.$emit('pick', date);
+          }
+        }, {
+          text: 'A week ago',
+          onClick(picker) {
+            const date = new Date();
+            date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+            picker.$emit('pick', date);
+          }
+        }]
+      },
     }  
   }
 }

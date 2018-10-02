@@ -20,8 +20,8 @@
           </li>
         </transition-group>
       </ul>
-      <p v-if="files.length > 1">You have {{files.length}} files</p>
-      <p v-else>{{ $t("message.nbOfFiles") }}</p>
+      <p v-if="files.length > 1">{{ $tc("message.nbOfFiles", 2, { count: files.length }) }}</p>
+      <p v-else>{{ $tc("message.nbOfFiles", 1) }}</p>
       <!-- <div v-bind:class="{ alert: showAlert }">vue class binding</div> -->
       <!-- <div v-bind:style="{ backgroundColor: bgColor, width: bgWidth, height: bgHeight }">vue style binding</div> -->
       <!-- <div v-bind:style="{ alertObject }">vue style binding to object</div> does not work -->
