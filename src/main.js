@@ -2,7 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import VeeValidate from 'vee-validate';
 import router from './router';
-import './plugins/element.js';
+import i18n from './plugins/element.js';
 
 /*
 import FileExplorer from 'file_explorer';
@@ -23,5 +23,6 @@ Vue.config.productionTip = false;
 
 new Vue({
   router,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

@@ -6,6 +6,7 @@
     </el-breadcrumb>
     <h1>Hello {{ their_name }}, this is about page</h1>
     <img src="../assets/logo.png">
+    <p>{{ $t("message.hello") }}</p>
     <p>File Explorer - Lorem ipsum dolor sit amet, elit, sed do tempor</p>
     <div>
       <p>

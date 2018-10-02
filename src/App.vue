@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/" tag="el-button">File Explorer</router-link>
+      <router-link to="/" tag="el-button">Home</router-link>
       <router-link to="/about" tag="el-button">About</router-link>
     </nav>
     <router-view/>
