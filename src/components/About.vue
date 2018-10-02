@@ -1,5 +1,9 @@
 <template>
   <div class="about">
+    <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb-item :to="{ path: '/' }">home</el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/about' }">about</el-breadcrumb-item>
+    </el-breadcrumb>
     <h1>Hello {{ their_name }}, this is about page</h1>
     <img src="../assets/logo.png">
     <p>File Explorer - Lorem ipsum dolor sit amet, elit, sed do tempor</p>

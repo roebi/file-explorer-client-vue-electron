@@ -1,5 +1,8 @@
 <template>
   <div class="filexplorer">
+    <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb-item :to="{ path: '/' }">home</el-breadcrumb-item>
+    </el-breadcrumb>
     <h1>{{ name }}</h1>
     <div class="holder">
       <form @submit.prevent="addFile">
