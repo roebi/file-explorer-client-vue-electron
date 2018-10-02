@@ -4,11 +4,12 @@
       <router-link to="/" tag="el-button">Home</router-link>
       <router-link to="/about" tag="el-button">About</router-link>
     </nav>
-    <div class="locale-changer">Language:
-      <select v-model="$i18n.locale">
-        <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
-      </select>
+    <div class="locale-changer">{{ $t("message.language") }}:
+      <el-select v-model="$i18n.locale">
+        <el-option v-for="lang in langs" :key="lang.value" :label="lang.label" :value="lang.value"></el-option>
+      </el-select>
     </div>
+    <br/>
     <router-view/>
   </div>
 </template>
@@ -23,7 +24,21 @@ export default {
   },
   // name: 'locale-changer',
   data () {
-    return { langs: ['de', 'en', 'zh', 'ja'] }
+    return {
+       langs: [{
+         value: 'de',
+         label: 'Deutsch'
+       }, {
+         value: 'en',
+         label: 'English'
+       }, {
+         value: 'zh',
+         label: 'Simplified Chinese'
+       }, {
+         value: 'ja',
+         label: 'Japanese'
+       }]
+     }
   }
 }
 </script>

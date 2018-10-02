@@ -7,6 +7,7 @@ export default {
     en: {
       el: enLocale.el,
       message: {
+        language: 'Language',
         hello: 'hello world',
         nbOfFiles: 'You have less than or equal to 1 file | You have {count} files',
       }
@@ -14,6 +15,7 @@ export default {
     de: {
       el: deLocale.el,
       message: {
+        language: 'Sprache',
         hello: 'Hallo Welt',
         nbOfFiles: 'Sie haben 1 oder weniger Files. | Sie haben {count} Files.',
       },
