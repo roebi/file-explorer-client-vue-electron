@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">File Explorer</router-link>
-      <router-link to="/about">About</router-link>
+      <router-link to="/" tag="el-button">File Explorer</router-link>
+      <router-link to="/about" tag="el-button">About</router-link>
     </nav>
     <router-view/>
   </div>
