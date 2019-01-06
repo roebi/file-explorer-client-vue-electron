@@ -15,7 +15,7 @@
       {{ filename }}
       <ul>
         <transition-group name="list" enter-active-class="animated bounceInUp" leave-active-class="animated bounceOutDown">
-          <li v-for="(file, index) in files" :key='index'>{{index}}. ({{file.type}}) {{file.name}}
+          <li v-for="(file, index) in files" :key='file.type + file.name'>{{index}}. ({{file.type}}) {{file.name}}
             <i class="fa fa-minus-circle" v-on:click="remove(index)"></i>
           </li>
         </transition-group>
