@@ -6,6 +6,10 @@
 
 https://vueschool.io/articles/vuejs-tutorials/how-to-migrate-from-vue-cli-to-vite/
 
+diffs in example repo:
+
+https://github.com/danielkellyio/vue-cli-to-vite-migration-example/commit/0cb953ccf2d73d39ca811a4a084e10dddbafb438
+
 ### Vue2 to Vue3
 
 https://v3-migration.vuejs.org/
@@ -21,12 +25,17 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production
 ```
 npm run build
+```
+
+### Preview production build
+```
+npm run serve
 ```
 
 ### Lints and fixes files
