@@ -1,3 +1,7 @@
-> 1%
+# Audience coverage: 88.6 % Region Global
+# https://browsersl.ist
+> 0.3%
 last 2 versions
-not ie <= 8
+Firefox ESR
+not dead
+
