@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import ElementPlus from 'element-plus'
-import 'element-plus/lib/locales.js'
-import 'element-plus/lib/locale/index.js'
+// import 'element-plus/lib/locales.js'
+// import 'element-plus/lib/locale/index.js'
 
 // TODO: theme
 // import 'element-ui/lib/theme-chalk/index.css

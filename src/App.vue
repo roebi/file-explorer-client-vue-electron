@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import FileExplorer from './components/FileExplorer'
 
 export default {

@@ -1,7 +1,7 @@
-import enLocale from 'element-ui/lib/locale/lang/en' // English (en)
-import deLocale from 'element-ui/lib/locale/lang/de' // German (de)
-import zhCNLocale from 'element-ui/lib/locale/lang/zh-CN' // Simplified Chinese (zh-CN)
-import jaLocale from 'element-ui/lib/locale/lang/ja' // Japanese (ja)
+import enLocale from 'element-plus/dist/locale/en' // English (en)
+import deLocale from 'element-plus/dist/locale/de' // German (de)
+import zhCnLocale from 'element-plus/dist/locale/zh-cn' // Simplified Chinese (zh-CN)
+import jaLocale from 'element-plus/dist/locale/ja' // Japanese (ja)
 
 export default {
     en: {
@@ -21,7 +21,7 @@ export default {
       },
     },
     zh: {
-      el: zhCNLocale.el,
+      el: zhCnLocale.el,
       message: {
         hello: '你好',
       },

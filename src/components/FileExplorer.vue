@@ -29,7 +29,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 export default {
   name: 'FileExplorer',
   data() {
