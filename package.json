@@ -3,13 +3,13 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "electron:build": "vue-cli-service electron:build",
-    "postinstall": "electron-builder install-app-deps",
-    "electron:serve": "vue-cli-service electron:serve",
-    "test:unit": "vue-cli-service test:unit"
+    "serve_unused": "vue-cli-service serve",
+    "build_unused": "vue-cli-service build",
+    "lint_unused": "vue-cli-service lint",
+    "electron:build_unused": "vue-cli-service electron:build",
+    "postinstall_unused": "electron-builder install-app-deps",
+    "electron:serve_unused": "vue-cli-service electron:serve",
+    "test:unit_unused": "vue-cli-service test:unit"
   },
   "dependencies": {
     "element-plus": "^2.8.0",
@@ -19,16 +19,9 @@
     "vue-router": "^4.4.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^5.0.8",
-    "@vue/cli-plugin-eslint": "^5.0.8",
-    "@vue/cli-plugin-unit-mocha": "^5.0.8",
-    "@vue/cli-service": "^5.0.8",
     "@vue/test-utils": "^2.4.6",
     "chai": "^5.1.1",
-    "electron": "^31.3.1",
-    "vue-cli-plugin-electron-builder": "^2.1.1",
-    "vue-cli-plugin-element": "^1.0.1",
-    "vue-template-compiler": "^2.7.16"
+    "electron": "^31.3.1"
   },
   "main": "dist_electron/bundled/background.js"
 }
