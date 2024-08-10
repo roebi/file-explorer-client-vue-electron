@@ -10,6 +10,10 @@ diffs in example repo:
 
 https://github.com/danielkellyio/vue-cli-to-vite-migration-example/commit/0cb953ccf2d73d39ca811a4a084e10dddbafb438
 
+here use the today newest versions ...
+
+https://vitejs.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated
+
 ### Vue2 to Vue3
 
 https://v3-migration.vuejs.org/
