@@ -14,7 +14,7 @@
   "dependencies": {
     "element-ui": "^2.15.14",
     "vee-validate": "^2.1.5",
-    "vue": "^3.4.33",
+    "vue": "^3.4.38",
     "vue-i18n": "^8.28.2",
     "vue-router": "^3.6.5"
   },
